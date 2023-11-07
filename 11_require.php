@@ -1,6 +1,6 @@
 <?php 
 
-// include '10_stringsComplexas.php'; não apresenta erro direto
+// include '10_stringsComplexas.php'; apresenta aviso sobre erro mas não impede do código ser rodado
 // require '10_stringsComplexas.php'; não limita a quantidade de vezes que pode ser requisitado
 require_once '11_funcoes.php'; //não permitirá que o mesmo arquivo seja requisitado diversas vezes
 
