@@ -20,8 +20,8 @@ $novosAlunos = [
   "Julia"
 ];
 
-$alunos2023 = [...$alunos2022, ...$novosAlunos];
+//$alunos2023 = [...$alunos2022, ...$novosAlunos];
 
 echo "<pre>";
-echo var_dump($alunos2023) . PHP_EOL;
+//echo var_dump($alunos2023) . PHP_EOL;
 echo "</pre>";
