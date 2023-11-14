@@ -1,20 +1,21 @@
 <?php 
 require_once 'src/Conta.php';
+require_once 'src/Titular.php';
 
-$primeiraConta = new Conta();
-$primeiraConta->cpfTitular = '091829402';
-$primeiraConta->nomeTitular = 'Mauricio Saraiva';
-$primeiraConta->saldo = 25000;
-
-$primeiraConta->sacar(150);
-
-
-$segundaConta = new Conta();
-$segundaConta->saldo = 10000;
+$titular1 = new Titular('Mauricio Saraiva','091829402');
+$titular2 = new Titular('Jasmin Osiris','83839402');
+$primeiraConta = new Conta($titular1);
+$segundaConta = new Conta($titular2);
+$primeiraConta->setSaldo(25000);
 
 $primeiraConta->tranferir(625, $segundaConta);
 
 echo '<pre>';
-echo var_dump($primeiraConta);
-echo var_dump($segundaConta);
+echo var_dump($primeiraConta) . "<br>";
+echo var_dump($segundaConta) . "<br>";
 echo '</pre>';
+
+echo $primeiraConta->getTitular()->getNome() . '<br>';
+echo $primeiraConta->getTitular()->getCPF() . '<br>';
+echo $primeiraConta->getSaldo() . '<br>';
+echo "Total de contas criadas: {$primeiraConta->getTotalDeContas()}";

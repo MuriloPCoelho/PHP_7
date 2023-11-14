@@ -4,10 +4,18 @@
 class Conta 
 {
   // Atributos
-  public $cpfTitular;
-  public $saldo = 0; //define um valor inicial
-  public $nomeTitular;
+  private $titular;
+  private $saldo;
+  private $idConta;
+  private static $totalDeContas;
 
+  function __construct(Titular $titular)
+  {
+    self::$totalDeContas++ ;
+    $this->titular = $titular;
+    $this->idConta = self::$totalDeContas;
+
+  }
 
   // Métodos
   public function sacar(float $valorDoSaque) : void
@@ -44,6 +52,26 @@ class Conta
 
     }
 
+  }
+
+  public function setSaldo(float $saldo) : void
+  {
+    $this->saldo = $saldo;
+  }
+
+  public function getSaldo() : float
+  {
+    return $this->saldo;
+  }
+
+  public static function getTotalDeContas() : int 
+  {
+    return Conta::$totalDeContas;
+  }
+
+  public function getTitular() 
+  {
+    return $this->titular;
   }
 
 }
