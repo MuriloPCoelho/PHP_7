@@ -5,7 +5,6 @@ class Conta
 {
   
   // Atributos
-
   private $titular;
   private $saldo;
   private $idConta;
@@ -53,12 +52,13 @@ class Conta
       $contaDeDestino->depositar($valorDaTransferencia);
 
     }
+  }
 
   //getters e setters
-
   public function setSaldo(float $saldo) : void
   {
     $this->saldo = $saldo;
+    
   }
 
   public function getSaldo() : float
