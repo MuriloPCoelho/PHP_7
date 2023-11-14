@@ -3,7 +3,9 @@
 
 class Conta 
 {
+  
   // Atributos
+
   private $titular;
   private $saldo;
   private $idConta;
@@ -52,7 +54,7 @@ class Conta
 
     }
 
-  }
+  //getters e setters
 
   public function setSaldo(float $saldo) : void
   {
