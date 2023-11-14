@@ -1,10 +1,10 @@
 <?php 
 require_once 'src/Conta.php';
+require_once 'src/Titular.php';
 
-$primeiraConta = new Conta();
-$primeiraConta->cpfTitular = '091829402';
-$primeiraConta->nomeTitular = 'Mauricio Saraiva';
-$primeiraConta->saldo = 25000;
+$titular = new Titular('Mauricio Saraiva','091829402');
+$primeiraConta = new Conta($titular);
+$primeiraConta->setSaldo(25000);
 
 echo '<pre>';
 echo var_dump($primeiraConta);
