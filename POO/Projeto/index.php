@@ -14,3 +14,8 @@ echo '<pre>';
 echo var_dump($primeiraConta) . "<br>";
 echo var_dump($segundaConta) . "<br>";
 echo '</pre>';
+
+echo $primeiraConta->getTitular()->getNome() . '<br>';
+echo $primeiraConta->getTitular()->getCPF() . '<br>';
+echo $primeiraConta->getSaldo() . '<br>';
+echo "Total de contas criadas: {$primeiraConta->getTotalDeContas()}";

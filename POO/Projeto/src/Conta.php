@@ -3,6 +3,9 @@
 
 class Conta 
 {
+  
+  // Atributos
+
   private $titular;
   private $saldo;
   private $idConta;
@@ -44,13 +47,12 @@ class Conta
   {
     if ($valorDaTransferencia > $this->saldo) {
       echo "Saldo Indisponível";
-
+      
     } else {
       $this->sacar($valorDaTransferencia);
       $contaDeDestino->depositar($valorDaTransferencia);
 
     }
-  }
 
   //getters e setters
 
@@ -73,5 +75,5 @@ class Conta
   {
     return $this->titular;
   }
-  
+
 }
