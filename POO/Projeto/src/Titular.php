@@ -4,7 +4,7 @@ class Titular {
   private $nome;
   private $cpf;
 
-  public function __construct(string $nome, string $cpf) 
+  public function __construct(string $nome, CPF $cpf) 
   {
     $this->nome = $nome;
     $this->cpf = $cpf;
@@ -28,6 +28,6 @@ class Titular {
 
   public function getCPF() : string
   {
-    return $this->cpf;
+    return $this->cpf->getCPF();
   }
 }
