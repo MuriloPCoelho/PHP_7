@@ -1,9 +1,10 @@
 <?php 
 require_once 'src/Conta.php';
 require_once 'src/Titular.php';
+require_once 'src/CPF.php';
 
-$titular1 = new Titular('Mauricio Saraiva','091829402');
-$titular2 = new Titular('Jasmin Osiris','83839402');
+$titular1 = new Titular('Mauricio Saraiva',new CPF('091829402'));
+$titular2 = new Titular('Jasmin Osiris',new CPF('83839402'));
 $primeiraConta = new Conta($titular1);
 $segundaConta = new Conta($titular2);
 $primeiraConta->setSaldo(25000);
